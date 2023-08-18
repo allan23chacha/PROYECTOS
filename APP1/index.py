@@ -48,7 +48,7 @@ linea_titulo = dbc.Container([
     dbc.Row([html.H2("MI PRIMERA PÁGINA")],className="TITULOp")
 ],className="container_title")
 
-df = pd.read_csv("assets/datas/carros.csv",sep=",")
+df = pd.read_csv("APP1/assets/datas/carros.csv",sep=",")
 df["Num_carro"] = [f"Carro{x}" for x in np.arange(1,df.shape[0]+1)]
 df["Tipocarro"] = [ "TESLA" if x%2==0 else "MAZDA" for x in np.arange(1,df.shape[0]+1)]
 fig = px.scatter(df,x="kms",y="precio",title="KMS VS PRECIO",color="Tipocarro",hover_data="Num_carro")
