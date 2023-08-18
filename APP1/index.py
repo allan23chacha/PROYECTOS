@@ -81,7 +81,7 @@ def crear_figura_filtrada(tipocarro):
     fig = px.scatter(df_filtrado,x="kms",y="precio",title="KMS VS PRECIO",color="Tipocarro",hover_data="Num_carro")
     fig.update_layout(
         xaxis_title="KMS",
-        yaxis_title="PRECIO"
+        yaxis_title="PRECIO",
     )
     return fig
 
